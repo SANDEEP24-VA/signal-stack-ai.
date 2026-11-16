@@ -1,0 +1,63 @@
+from app.database.base import Base
+from app.database.models import (
+    Company,
+    CompanyFact,
+    CompanyProfile,
+    Competitor,
+    CompetitorRelationshipType,
+    CompetitorReviewStatus,
+    DiscoveredUrl,
+    DiscoveredUrlStatus,
+    FounderBusinessContext,
+    InformationProvenanceType,
+    IntelligenceSource,
+    IntelligenceSourceCategory,
+    IntelligenceSourceStatus,
+    IntelligenceSourceType,
+    InterviewAnswer,
+    InterviewQuestion,
+    InterviewQuestionStatus,
+    InterviewQuestionType,
+    InterviewSession,
+    InterviewSessionStatus,
+    ResearchPage,
+    ResearchRun,
+    SourceCrawlLog,
+)
+from app.database.migration import ensure_schema_compatibility
+from app.database.session import SessionLocal, check_db_connection, engine, get_db
+
+# Ensure any existing SQLite database schema has the required columns
+ensure_schema_compatibility(engine)
+
+__all__ = [
+    "Base",
+    "SessionLocal",
+    "check_db_connection",
+    "engine",
+    "get_db",
+    "Company",
+    "CompanyFact",
+    "CompanyProfile",
+    "Competitor",
+    "CompetitorRelationshipType",
+    "CompetitorReviewStatus",
+    "DiscoveredUrl",
+    "DiscoveredUrlStatus",
+    "FounderBusinessContext",
+    "InformationProvenanceType",
+    "IntelligenceSource",
+    "IntelligenceSourceCategory",
+    "IntelligenceSourceStatus",
+    "IntelligenceSourceType",
+    "InterviewAnswer",
+    "InterviewQuestion",
+    "InterviewQuestionStatus",
+    "InterviewQuestionType",
+    "InterviewSession",
+    "InterviewSessionStatus",
+    "ResearchPage",
+    "ResearchRun",
+    "SourceCrawlLog",
+    "ensure_schema_compatibility",
+]
